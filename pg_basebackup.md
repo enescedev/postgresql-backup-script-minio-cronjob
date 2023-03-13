@@ -2,13 +2,13 @@
 #### Postgresql veritabanı pg_basebackup yöntemi ile yedekleme ve arşivlenen dosyasını MinIO depolama sistemi kullanarak bir depolama servisine yüklemek için cronjob ile otomatikleştirilmiş script hazırlamak.
 
 İlk olarak, ortam değişkenlerini oluşturan:
-• DATABASE: yedeklenecek PostgreSQL belgelerinin adı
-• USERNAME: PostgreSQL arşivlerine erişmek için kullanılan kullanıcı adı
-• BACKUP_DIR: yedek saklamanın kaydedileceği dizin adı
-• BACKUP_PWD: yedek gözlemin kaydedileceği dizin tam yolu
-• BUCKET: yedek depolamanın yükleneceği MinIO nesne depolama servisi URL'si
-• BUCKET_NAME: yedek depolamanın yükleneceği MinIO depolama alanı adı
-• LOG_FILE: log dosyalarının kaydedileceği dizin adı,
+-  DATABASE: yedeklenecek PostgreSQL belgelerinin adı
+-  USERNAME: PostgreSQL arşivlerine erişmek için kullanılan kullanıcı adı
+-  BACKUP_DIR: yedek saklamanın kaydedileceği dizin adı
+-  BACKUP_PWD: yedek gözlemin kaydedileceği dizin tam yolu
+-  BUCKET: yedek depolamanın yükleneceği MinIO nesne depolama servisi URL'si
+-  BUCKET_NAME: yedek depolamanın yükleneceği MinIO depolama alanı adı
+-  LOG_FILE: log dosyalarının kaydedileceği dizin adı,
 belirlenir ve ilgili dizinler oluşturulur.
 
 Daha sonra, 'BACKUP_FILE_NAME' değişkeni , mevcut tarih saatini kullanarak yedek dosya adı oluşturur. 
